@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #a8dadc, #f1faee);
+    color: #333;
+}
+
+.game-container {
+    text-align: center;
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 5%;
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.2);
+    max-width: 450px;
+    width: 100%;
+}
+
+h1 {
+    margin-bottom: 30px;
+    color: #457b9d;
+    font-size: 2.6rem;
+    letter-spacing: 1.2px;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.cell {
+    width: 110px;
+    height: 110px;
+    background-color: #f1faee;
+    border: 2px solid #457b9d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #457b9d;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, color 0.3s;
+    border-radius: 5%;
+}
+
+.cell:hover {
+    background-color: #a8dadc;
+    color: #1d3557;
+    transform: scale(1.1);
+}
+
+#restart, #difficulty {
+    margin-top: 25px;
+    background-color: #e63946;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-bottom: 12px;
+}
+
+#restart:hover, #difficulty:hover {
+    background-color: #d62839;
+    transform: scale(1.05);
+}
+
+#game-status {
+    margin-top: 25px;
+    padding: 12px 20px;
+    font-size: 1.3rem;
+    color: #ffffff;
+    background-color: #549cc8;
+    border-radius: 12px;
+    box-shadow: 0px 0px 15px rgba(69, 123, 157, 0.5);
+    transition: box-shadow 0.3s, background-color 0.3s;
+}
+
+#game-status:hover {
+    background-color: #1d3557;
+    box-shadow: 0px 0px 20px rgba(29, 53, 87, 0.6);
+}
+
+select {
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 1px solid #457b9d;
+    background-color: #f1faee;
+    color: #457b9d;
+    outline: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+select:hover {
+    background-color: #a8dadc;
+    color: #1d3557;
+}
+
+@media (max-width: 600px) {
+    .cell {
+        width: 85px;
+        height: 85px;
+        font-size: 2.2rem;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+}
